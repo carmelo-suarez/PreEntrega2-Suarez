@@ -1,0 +1,34 @@
+@use '../base/variables' as *;
+/* importamos fuente externa */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+
+/* Reset pagina*/
+*,
+::before,
+::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $main-font;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1,h2,h3,h4{
+  text-align: center;
+}
+
+.container{
+  width: min(90%, 1440px);
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+:root{
+  --nav-icon-menu: url("../img/menu.svg");
+  --transform-list-menu: translate(-100%);
+}

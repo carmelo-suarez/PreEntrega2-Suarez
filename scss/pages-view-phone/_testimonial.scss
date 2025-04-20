@@ -1,0 +1,42 @@
+@use '../base/variables' as *;
+@use 'sass:map';
+@use '../utilities/maps' as *;
+//map.get($map:,$key:);
+/* Testimonios */
+.testimonials {
+  max-width: min(90%, 800px);
+  margin: 50px auto;
+  padding: 40px;
+  background: map.get($colors,white-color);
+  border-radius: 10px;
+  box-shadow: 0 0 3px map.get($colors,black-color);
+  text-align: center;
+}
+
+.testimonial__title {
+  margin-bottom: 30px;
+  color: map.get($colors,primary-color);
+}
+
+.testimonial {
+  margin: 30px 0;
+  padding: 20px;
+  border-top: 1px solid map.get($colors,dull-gray);
+}
+
+.testimonial__img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.paragraph__name {
+  font-weight: $bold-font;
+  margin-bottom: 5px;
+}
+
+.paragraph__quote {
+  font-style: italic;
+  color: map.get($colors,-gray);
+}

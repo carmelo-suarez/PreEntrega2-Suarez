@@ -1,0 +1,18 @@
+/*pantallas de escritorio*/
+@media (width >= 900px){
+  /*menu navegacion*/
+  .nav{
+    --transform-list-menu: translate(0);
+  }
+
+  .nav__label{
+    display: none;
+  }
+
+  .nav__list{
+    position: static;
+    grid-auto-flow: column;
+    place-content: unset;
+    gap: 3rem;
+  }
+}/*final pantalla de escritorio*/

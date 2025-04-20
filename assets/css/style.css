@@ -1,97 +1,413 @@
 /* importamos fuente externa */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
-
-/* Reseteamos margen y padding */
-html, body {
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+/* Reset pagina*/
+*,
+::before,
+::after {
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Fira Sans, sans-serif;
 }
-/* header */
-.encabezado {
-  background-color: #4d55cc;
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
 
-.contenido {
-  padding: 60px 20px 0px;
-}
-
-h1, h2, h3 {
-  text-align: center;
-}
-
-/* menu */
-.navmenu,
-.menu-lis {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.navmenu {
-  align-items: center;
-  justify-content: space-around;
-}
-
-.menu-lis {
-  list-style: none;
-  padding-left: 0;
-}
-
-.navmenu .menu-lis .lis-item {
-  padding: 0 15px;
-}
-
-.navmenu .menu-lis .lis-item a,
-.logo a {
+a {
   text-decoration: none;
-  color: #efefef;
 }
 
-.navmenu .menu-lis .lis-item a:hover,
-.logo a:hover {
-  text-decoration: underline;
-  transition: 0, 3s;
-}
-
-/* Blog */
-.cont-img {
+h1, h2, h3, h4 {
   text-align: center;
 }
-.img {
-  width: 50%;
-  height: auto;
-}
-/*pagina contacto*/
 
-/*formulario*/
-label,
-input {
-  display: block;
-  padding: 3px 0;
+.container {
+  width: min(90%, 1440px);
+  margin: 10px auto;
+  overflow: hidden;
 }
 
-.cont-form-contacto {
+:root {
+  --nav-icon-menu: url("../img/menu.svg");
+  --transform-list-menu: translate(-100%);
+}
+
+.us__main, .footer__main, .footer__contact, .header__main {
   display: grid;
+  gap: 1.5rem;
+}
+
+/* header */
+/* menu */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/*z-index se puede utilizar en elementos hijos de flex container (.nav)*/
+.nav__label, .nav__logo--link {
+  z-index: 100;
+}
+
+.nav:has(.nav__checkbox:checked) {
+  --nav-icon-menu: url("../img/menu-cerrar.svg");
+  --transform-list-menu: translate(0);
+}
+
+.nav__label {
+  width: 36px;
+  height: 36px;
+  background-image: var(--nav-icon-menu);
+  background-size: cover;
+  cursor: pointer;
+  transition: backgound-image 0.4s;
+}
+
+.nav__list {
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  display: grid;
+  place-content: center;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+  transform: var(--transform-list-menu);
+  transition: transform 0.5s;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__link {
+  display: inline-block;
+  padding: 0.8rem 0.5rem;
+  color: #000000;
+}
+
+.nav__logo, .footer__logo {
+  width: 56px;
+  height: 56px;
+}
+
+.nav__checkbox {
+  display: none;
+}
+
+/* pagina inicio */
+/* header main*/
+.header__main {
+  padding: 30px 0;
+}
+
+/*titulo principal adaptable*/
+.header__title {
+  font-size: clamp(1.8rem, 4vw + 1rem, 2.8rem);
+}
+
+.header__figure {
+  width: min(100%, 380px);
+  justify-self: center;
+}
+
+.header__img {
+  width: 100%;
+}
+
+.header__paragraph {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.header__cto {
+  background-color: #1B56FD;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+
+/*footer*/
+.footer {
+  background-color: #000000;
+}
+
+.footer__container {
+  color: #ffffff;
+  padding: 30px 0;
+  width: min(90%, 1440px);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.footer__main {
+  justify-items: center;
+}
+
+.footer__contact {
+  max-width: 390px;
+  text-align: center;
+}
+
+.footer__copy {
+  background-color: #1B56FD;
+  color: #000000;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 6px;
+  justify-self: center;
+}
+
+.footer__social {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+}
+
+.footer__social--link {
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-/*pagina servicios*/
-.servicios {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 4rem;
+.footer__copyright {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #ffffff;
 }
-/*footer*/
-footer {
+
+.footer__copyright--paragraph {
   text-align: center;
 }
-/*vista movil y tablets*/
-@media (max-width: 999px) {
-  .servicios {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+
+/*Pagina nosotros*/
+.us__main {
+  padding: 30px 0;
+}
+
+.us__title {
+  font-size: clamp(1.8rem, 4vw + 1rem, 2.8rem);
+}
+
+.us__figure {
+  width: min(100%, 380px);
+  justify-self: center;
+}
+
+.us__img {
+  width: 100%;
+}
+
+/*pantallas de escritorio*/
+@media (width >= 900px) {
+  /*menu navegacion*/
+  .nav {
+    --transform-list-menu: translate(0);
+  }
+  .nav__label {
+    display: none;
+  }
+  .nav__list {
+    position: static;
+    grid-auto-flow: column;
+    place-content: unset;
+    gap: 3rem;
+  }
+} /*final pantalla de escritorio*/
+/*pantallas de tablets*/
+@media (width >= 768px) {
+  /*pagina inicio*/
+  .header__main {
+    padding: 80px 0;
+    gap: 1rem;
+    align-items: center;
+    grid-template-columns: 55% 40%;
+    justify-content: space-between;
+    grid-template-areas: "title img" "paragraph img" "link img";
+  }
+  .header__title {
+    grid-area: title;
+  }
+  .header__figure {
+    grid-area: img;
+  }
+  .header__paragraph {
+    grid-area: paragraph;
+  }
+  .header__cto {
+    grid-area: link;
+    padding: 1rem 2rem;
+    place-self: start;
+  }
+  /* pagina nosotros*/
+  .us__main {
+    padding: 80px 0;
+    gap: 1rem;
+    align-items: center;
+    grid-template-columns: 40% 55%;
+    justify-content: space-between;
+    grid-template-areas: "img title" "img paragraph";
+  }
+  .us__title {
+    grid-area: title;
+  }
+  .us__figure {
+    grid-area: img;
+  }
+  .paragraph__container {
+    grid-area: paragraph;
   }
 }
+/* pagina Servicios */
+.services {
+  padding: 50px 0;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.title__highlight {
+  display: inline-block;
+  background-color: #0118D8;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.paragraph, main section p {
+  line-height: 2;
+  margin-top: 1.5rem;
+}
+
+.services__container {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 2rem;
+}
+
+.services__article {
+  width: min(95%, 450px);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  border: 1px solid #000000;
+  border-bottom-width: 3px;
+  border-radius: 1.5rem;
+}
+
+.services__span {
+  display: block;
+  width: max-content;
+  background-color: #1B56FD;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.services__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.services__link {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.services__img {
+  min-width: 80px;
+  min-height: 160px;
+  width: 60%;
+}
+
+/* Testimonios */
+.testimonials {
+  max-width: min(90%, 800px);
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 3px #000000;
+  text-align: center;
+}
+
+.testimonial__title {
+  margin-bottom: 30px;
+  color: #1B56FD;
+}
+
+.testimonial {
+  margin: 30px 0;
+  padding: 20px;
+  border-top: 1px solid #dddddd;
+}
+
+.testimonial__img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.paragraph__name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.paragraph__quote {
+  font-style: italic;
+  color: #555555;
+}
+
+/*pagina contacto con anidamiento en sass*/
+/*formulario*/
+main section {
+  margin-top: 30px;
+}
+main section h1 {
+  font-size: clamp(1.8rem, 4vw + 1rem, 2.8rem);
+}
+main section form {
+  max-width: 450px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #efefef;
+}
+main section form label {
+  display: block;
+  margin-bottom: 10px;
+}
+main section form input {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+}
+main section form textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+}
+main section form button {
+  padding: 10px 20px;
+  background-color: #1B56FD;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main section form button:hover {
+  background-color: #0118D8;
+}
+
+/*# sourceMappingURL=style.css.map */

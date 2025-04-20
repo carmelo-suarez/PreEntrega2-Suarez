@@ -1,0 +1,66 @@
+@use '../base/variables' as *;
+@use 'sass:map';
+@use '../utilities/maps' as *;
+/* pagina Servicios */
+.services{
+  padding: 50px 0;
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: $median-font;
+}
+
+.title__highlight{
+  display: inline-block;
+  background-color: map.get($colors,secundary-color);
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.paragraph{
+  line-height: 2;
+  margin-top: 1.5rem;
+}
+
+.services__container{
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 2rem;
+}
+
+.services__article{
+  width: min(95%, 450px);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  border: 1px solid map.get($colors,black-color);
+  border-bottom-width: 3px;
+  border-radius: 1.5rem;
+}
+
+.services__span{
+  display: block;
+  width: max-content;
+  background-color: map.get($colors,primary-color);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.services__content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.services__link{
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.services__img{
+  min-width: 80px;
+  min-height: 160px;
+  width: 60%;
+}

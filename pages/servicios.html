@@ -1,75 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicios</title>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="../assets/css/style.css" />
-  </head>
 
-  <body>
-    <header class="encabezado">
-      <nav class="navmenu">
-        <div class="logo">
-          <a href="../index.html">LOGO</a>
-        </div>
-        <ul class="menu-lis">
-          <li class="lis-item"><a href="../index.html">Inicio</a></li>
-          <li class="lis-item"><a href="nosotros.html">Nosotros</a></li>
-          <li class="lis-item"><a href="servicios.html">Servicios</a></li>
-          <li class="lis-item"><a href="blog.html">Blog</a></li>
-          <li class="lis-item"><a href="contacto.html">Contacto</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Carmelo Suarez Claudio, desarrollador de sitios web modernos y responsivos.">
+  <meta name="keywords" content="Desarrollo web, portafolio, HTML CSS, sitios web modernos, proyectos web">
+  <title>Servicios</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <div class="container"><!--Contenedor de toda la pagina web-->
+
+    <header class="header">
+      <nav class="nav">
+        <a class="nav__logo--link" href="../index.html">
+          <img class="nav__logo" src="../assets/img/logo-negro.png" alt="Logo">
+        </a>
+        <label class="nav__label">
+          <input class="nav__checkbox" type="checkbox">
+        </label>
+        <ul class="nav__list">
+          <li class="nav__items"><a class="nav__link" href="../index.html">Inicio</a></li>
+          <li class="nav__items"><a class="nav__link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav__items"><a class="nav__link" href="servicios.html">Servicios</a></li>
+          <li class="nav__items"><a class="nav__link" href="testimonial.html">Testimonios</a></li>
+          <li class="nav__items"><a class="nav__link" href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="contenido">
-      <h1>Mis Servicios</h1>
-      <div class="servicios">
-        <!-- Apertura -->
-        <section class="servicio">
-          <h2>Desarrollo Web</h2>
-          <p>
-            Mauris justo ante, commodo sed faucibus in, dictum quis erat. Donec
-            consequat quis arcu et finibus. Nulla interdum vitae turpis et
-            pretium. Duis nibh risus, lobortis et diam quis, congue scelerisque
-            lacus. Suspendisse malesuada lacus non augue interdum, non
-            pellentesque ex ullamcorper. Vestibulum est ex, consectetur sit amet
-            porta sed, scelerisque ut dui.
-          </p>
-        </section>
+      <section class="services">
+        <h1 class="title title__highlight">Servicios</h1>
+        <p class="paragraph">Ofrezco servicios de desarrollo web personalizados, diseñados para ayudarte a destacar en
+          línea con soluciones modernas, funcionales y totalmente adaptadas a las necesidades de tu negocio.
+        </p>
+        <section class="services__container">
+          <article class="services__article services__article--gray">
+            <h2 class="services__title">
+              <span class="services__span">
+                Motor de
+              </span>
+              <span class="services__span">
+                Búsqueda
+              </span>
+            </h2>
+            <div class="services__content">
+              <a class="services__link" href="#">
+                <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+              </a>
+              <img class="services__img" src="../assets/img/search.svg" alt="">
+            </div>
+          </article>
 
-        <section class="servicio">
-          <h2>Servicio 2</h2>
-          <p>
-            Nulla eu egestas elit, vitae faucibus dolor. Proin a dui efficitur,
-            tincidunt ex at, egestas nisl. M2rbi lobortis cursus rutrum. Aliquam
-            est nibh, vehicula sed velit sed, varius tristique augue. Nam at
-            ornare lacus. Morbi auctor ut lacus non condimentum. Sed at turpis
-            nisl. Phasellus pellentesque velit non viverra cursus. Aliquam
-            dapibus accumsan condimentum. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia curae; Curabitur eu
-            purus id neque convallis egestas.
-          </p>
-        </section>
+          <article class="services__article services__article--yellow">
+            <h2 class="services__title">
+              <span class="services__span">
+                Campañas de
+              </span>
+              <span class="services__span">
+                publicidad
+              </span>
+            </h2>
+            <div class="services__content">
+              <a class="services__link" href="#">
+                <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+              </a>
+              <img class="services__img" src="../assets/img/advertising.svg" alt="">
+            </div>
+          </article>
 
-        <section class="servicio">
-          <h2>Servicio 3</h2>
-          <p>
-            Mauris justo ante, commodo sed faucibus in, dictum quis erat. Donec
-            consequat quis arcu et finibus. Nulla interdum vitae turpis et
-            pretium. Duis nibh risus, lobortis et diam quis, congue scelerisque
-            lacus. Suspendisse malesuada lacus non augue interdum, non
-            pellentesque ex ullamcorper. Vestibulum est ex, consectetur sit amet
-            porta sed, scelerisque ut dui.
-          </p>
-        </section>
-      </div><!--cierre div-->
-    </main>
+          <article class="services__article services__article--black">
+            <h2 class="services__title">
+              <span class="services__span">
+                Marketing de
+              </span>
+              <span class="services__span">
+                contenidos
+              </span>
+            </h2>
+            <div class="services__content">
+              <a class="services__link" href="#">
+                <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+              </a>
+              <img class="services__img" src="../assets/img/marketing.svg" alt="">
+            </div>
+          </article>
 
-    <footer>
-      <p class="">Todos los derechos reservados, Carmelo Suarez Claudio</p>
-    </footer>
-  </body>
+          <article class="services__article services__article--yellow">
+            <h2 class="services__title">
+              <span class="services__span">
+                Blog de Vida
+              </span>
+              <span class="services__span">
+                Sostenible
+              </span>
+            </h2>
+            <div class="services__content">
+              <a class="services__link" href="#">
+                <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+              </a>
+              <img class="services__img" src="../assets/img/blog.svg" alt="">
+            </div>
+          </article>
+
+          <article class="services__article services__article--black">
+            <h2 class="services__title">
+              <span class="services__span">
+                Sitio Web para
+              </span>
+              <span class="services__span">
+                Locales
+              </span>
+            </h2>
+            <div class="services__content">
+              <a class="services__link" href="#">
+                <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+              </a>
+              <img class="services__img" src="../assets/img/business.svg" alt="">
+            </div>
+          </article>
+
+          <article class="services__article services__article--gray">
+            <h2 class="services__title">
+              <span class="services__span">
+                Pagina de Eventos
+              </span>
+              <span class="services__span">
+                o Conferencias
+              </span>
+            </h2>
+            <div class="services__content">
+              <a class="services__link" href="#">
+                <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+              </a>
+              <img class="services__img" src="../assets/img/conference.svg" alt="">
+
+            </div>
+          </article>
+
+        </section>
+      </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <section class="footer__main">
+        <a href="index.html" class="footer__logo--link">
+          <img src="../assets/img/logo-blanco.png" alt="Logo" class="footer__logo">
+        </a>
+
+        <article class="footer__contact">
+          <h4 class="footer__copy">CONTÁCTANOS:</h4>
+          <p class="footer__info">Email: carmelo@cs.es</p>
+          <p class="footer__info">Teléfono: 633-897-257</p>
+          <p class="footer__info">Dirección: CL COMUNIDAD DE MADRID 39 BIS 1º F 50</p>
+        </article>
+
+        <nav class="footer__social">
+          <a href="https://es.linkedin.com/" target="_blank" class="footer__social--link"><img
+              src="../assets/img/linkedin.svg" alt="Linkedin" class="footer__media"></a>
+          <a href="https://x.com/" target="_blank" class="footer__social--link"><img src="../assets/img/twitter.svg"
+              alt="X" class="footer__media"></a>
+          <a href="https://github.com/carmelo-suarez/" target="_blank" class="footer__social--link"><img
+              src="../assets/img/github.svg" alt="Git hub" class="footer__media"></a>
+        </nav>
+      </section>
+      <section class="footer__copyright">
+        <p class="footer__copyright--paragraph">
+          &copy; Carmelo Suarez Claudio - Derechos Reservados 2025
+        </p>
+      </section>
+    </div>
+  </footer>
+</body>
 </html>

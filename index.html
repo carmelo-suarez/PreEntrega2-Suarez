@@ -1,113 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desarrollo Web e Implantación Web</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
 
-  <body>
-    <header class="encabezado">
-      <nav class="navmenu">
-        <div class="logo">
-          <a href="index.html">LOGO</a>
-        </div>
-        <ul class="menu-lis">
-          <li class="lis-item"><a href="index.html">Inicio</a></li>
-          <li class="lis-item"><a href="pages/nosotros.html">Nosotros</a></li>
-          <li class="lis-item"><a href="pages/servicios.html">Servicios</a></li>
-          <li class="lis-item"><a href="pages/blog.html">Blog</a></li>
-          <li class="lis-item"><a href="pages/contacto.html">Contacto</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Carmelo Suarez Claudio, desarrollador de sitios web modernos y responsivos.">
+  <meta name="keywords" content="Desarrollo web, portafolio, HTML CSS, sitios web modernos, proyectos web">
+  <title>Desarrollo e Implantación Web CS</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="container"><!--Contenedor de toda la pagina web-->
+
+    <header class="header">
+      <!--Menu de navegacion-->
+      <nav class="nav">
+        <a class="nav__logo--link" href="index.html">
+          <img class="nav__logo" src="./assets/img/logo-negro.png" alt="Logo">
+        </a>
+        <label class="nav__label">
+          <input class="nav__checkbox" type="checkbox">
+        </label>
+
+        <ul class="nav__list">
+          <li class="nav__items"><a class="nav__link" href="index.html">Inicio</a></li>
+          <li class="nav__items"><a class="nav__link" href="pages/nosotros.html">Nosotros</a></li>
+          <li class="nav__items"><a class="nav__link" href="pages/servicios.html">Servicios</a></li>
+          <li class="nav__items"><a class="nav__link" href="pages/testimonial.html">Testimonios</a></li>
+          <li class="nav__items"><a class="nav__link" href="pages/contacto.html">Contacto</a></li>
         </ul>
       </nav>
-    </header>
-    <main class="contenido">
-      <section>
-        <p>
-          Nulla eu egestas elit, vitae faucibus dolor. Proin a dui efficitur,
-          tincidunt ex at, egestas nisl. Morbi lobortis cursus rutrum. Aliquam
-          est nibh, vehicula sed velit sed, varius tristique augue. Nam at
-          ornare lacus. Morbi auctor ut lacus non condimentum. Sed at turpis
-          nisl. Phasellus pellentesque velit non viverra cursus. Aliquam dapibus
-          accumsan condimentum. Vestibulum ante ipsum primis in faucibus orci
-          luctus et ultrices posuere cubilia curae; Curabitur eu purus id neque
-          convallis egestas. Aenean fermentum, quam sed tristique fringilla,
-          risus dui finibus massa, vel vulputate arcu augue ultrices sapien.
-          Vestibulum ut pretium purus, luctus fermentum nibh. Donec mi nibh,
-          vestibulum non erat ac, aliquet mattis justo. Phasellus et vestibulum
-          elit, sed elementum velit.
+      <!--Inicio-->
+      <section class="header__main">
+        <h1 class="header__title">Convierte tu idea en un sitio web que impacta</h1>
+        <figure class="header__figure">
+          <img class="header__img" src="./assets/img/header-img.svg" alt="Imagen-principal">
+        </figure>
+        <p class="header__paragraph">Soluciones digitales personalizadas que no solo se ven bien, sino que también
+          cumplen objetivos reales: ya sea atraer más clientes, mostrar tu trabajo profesional o lanzar tu negocio
+          online.
         </p>
-        <p>
-          Donec eleifend dignissim lacinia. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas. Nunc
-          tristique eros ac purus commodo viverra. Maecenas dapibus semper sem
-          vitae ornare. Donec vitae nunc a turpis hendrerit mollis. In sodales
-          ut nisi et congue. Etiam gravida massa nec ante tempus, nec ultricies
-          purus accumsan. Ut quis turpis eget mauris laoreet pharetra sed quis
-          felis. Aliquam a ligula tellus. Nunc tempus nisl vel justo iaculis, et
-          tincidunt erat elementum. Sed est risus, tincidunt in urna ac, pretium
-          efficitur diam.
-        </p>
-      </section>
-      <section>
-        <p>
-          Nulla eu egestas elit, vitae faucibus dolor. Proin a dui efficitur,
-          tincidunt ex at, egestas nisl. Morbi lobortis cursus rutrum. Aliquam
-          est nibh, vehicula sed velit sed, varius tristique augue. Nam at
-          ornare lacus. Morbi auctor ut lacus non condimentum. Sed at turpis
-          nisl. Phasellus pellentesque velit non viverra cursus. Aliquam dapibus
-          accumsan condimentum. Vestibulum ante ipsum primis in faucibus orci
-          luctus et ultrices posuere cubilia curae; Curabitur eu purus id neque
-          convallis egestas. Aenean fermentum, quam sed tristique fringilla,
-          risus dui finibus massa, vel vulputate arcu augue ultrices sapien.
-          Vestibulum ut pretium purus, luctus fermentum nibh. Donec mi nibh,
-          vestibulum non erat ac, aliquet mattis justo. Phasellus et vestibulum
-          elit, sed elementum velit.
-        </p>
-        <p>
-          Donec eleifend dignissim lacinia. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas. Nunc
-          tristique eros ac purus commodo viverra. Maecenas dapibus semper sem
-          vitae ornare. Donec vitae nunc a turpis hendrerit mollis. In sodales
-          ut nisi et congue. Etiam gravida massa nec ante tempus, nec ultricies
-          purus accumsan. Ut quis turpis eget mauris laoreet pharetra sed quis
-          felis. Aliquam a ligula tellus. Nunc tempus nisl vel justo iaculis, et
-          tincidunt erat elementum. Sed est risus, tincidunt in urna ac, pretium
-          efficitur diam.
-        </p>
-      </section>
-      <section>
-        <p>
-          Nulla eu egestas elit, vitae faucibus dolor. Proin a dui efficitur,
-          tincidunt ex at, egestas nisl. Morbi lobortis cursus rutrum. Aliquam
-          est nibh, vehicula sed velit sed, varius tristique augue. Nam at
-          ornare lacus. Morbi auctor ut lacus non condimentum. Sed at turpis
-          nisl. Phasellus pellentesque velit non viverra cursus. Aliquam dapibus
-          accumsan condimentum. Vestibulum ante ipsum primis in faucibus orci
-          luctus et ultrices posuere cubilia curae; Curabitur eu purus id neque
-          convallis egestas. Aenean fermentum, quam sed tristique fringilla,
-          risus dui finibus massa, vel vulputate arcu augue ultrices sapien.
-          Vestibulum ut pretium purus, luctus fermentum nibh. Donec mi nibh,
-          vestibulum non erat ac, aliquet mattis justo. Phasellus et vestibulum
-          elit, sed elementum velit.
-        </p>
-        <p>
-          Donec eleifend dignissim lacinia. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas. Nunc
-          tristique eros ac purus commodo viverra. Maecenas dapibus semper sem
-          vitae ornare. Donec vitae nunc a turpis hendrerit mollis. In sodales
-          ut nisi et congue. Etiam gravida massa nec ante tempus, nec ultricies
-          purus accumsan. Ut quis turpis eget mauris laoreet pharetra sed quis
-          felis. Aliquam a ligula tellus. Nunc tempus nisl vel justo iaculis, et
-          tincidunt erat elementum. Sed est risus, tincidunt in urna ac, pretium
-          efficitur diam.
-        </p>
-      </section>
-    </main>
 
-    <footer>
-      <p class="">Todos los derechos reservados, Carmelo Suarez Claudio</p>
-    </footer>
-  </body>
+        <a href="./pages/contacto.html" class="header__cto">CONTÁCTAME</a>
+
+      </section>
+    </header>
+    <!--Nosotros-->
+    <section class="us__main">
+      <h1 class="us__title">Sobre mí</h1>
+      <figure class="us__figure">
+        <img class="us__img" src="../assets/img/personal.svg" alt="Imagen-personal">
+      </figure>
+      <section class="paragraph__container">
+        <p class="paragraph">¡Hola! Soy Carmelo, desarrollador web con enfoque en la implantación de sitios web
+          funcionales, atractivos y optimizados para el usuario. Me especializo en convertir ideas en experiencias
+          digitales reales, utilizando tecnologías modernas como HTML, CSS.</p>
+        <p class="paragraph">Tengo experiencia creando páginas web para emprendedores, pequeñas empresas y proyectos
+          personales, asegurándome de que cada sitio sea rápido, responsivo y fácil de mantener.</p>
+        <p class="paragraph">Actualmente, sigo ampliando mis habilidades con proyectos prácticos y colaboraciones, y
+          estoy
+          abierto a nuevos desafíos donde pueda aportar soluciones creativas y eficientes.</p>
+      </section>
+
+    </section>
+    <!--Servicios-->
+    <section class="services">
+      <h1 class="title title__highlight">Servicios</h1>
+      <p class="paragraph">Ofrezco servicios de desarrollo web personalizados, diseñados para ayudarte a destacar en
+        línea con soluciones modernas, funcionales y totalmente adaptadas a las necesidades de tu negocio.
+      </p>
+      <section class="services__container">
+        <article class="services__article services__article--gray">
+          <h2 class="services__title">
+            <span class="services__span">
+              Motor de
+            </span>
+            <span class="services__span">
+              Búsqueda
+            </span>
+          </h2>
+          <div class="services__content">
+            <a class="services__link" href="#">
+              <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+            </a>
+            <img class="services__img" src="../assets/img/search.svg" alt="">
+          </div>
+        </article>
+
+        <article class="services__article services__article--yellow">
+          <h2 class="services__title">
+            <span class="services__span">
+              Campañas de
+            </span>
+            <span class="services__span">
+              publicidad
+            </span>
+          </h2>
+          <div class="services__content">
+            <a class="services__link" href="#">
+              <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+            </a>
+            <img class="services__img" src="../assets/img/advertising.svg" alt="">
+          </div>
+        </article>
+
+        <article class="services__article services__article--black">
+          <h2 class="services__title">
+            <span class="services__span">
+              Marketing de
+            </span>
+            <span class="services__span">
+              contenidos
+            </span>
+          </h2>
+          <div class="services__content">
+            <a class="services__link" href="#">
+              <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+            </a>
+            <img class="services__img" src="../assets/img/marketing.svg" alt="">
+          </div>
+        </article>
+
+        <article class="services__article services__article--yellow">
+          <h2 class="services__title">
+            <span class="services__span">
+              Blog de Vida
+            </span>
+            <span class="services__span">
+              Sostenible
+            </span>
+          </h2>
+          <div class="services__content">
+            <a class="services__link" href="#">
+              <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+            </a>
+            <img class="services__img" src="../assets/img/blog.svg" alt="">
+          </div>
+        </article>
+
+        <article class="services__article services__article--black">
+          <h2 class="services__title">
+            <span class="services__span">
+              Sitio Web para
+            </span>
+            <span class="services__span">
+              Locales
+            </span>
+          </h2>
+          <div class="services__content">
+            <a class="services__link" href="#">
+              <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+            </a>
+            <img class="services__img" src="../assets/img/business.svg" alt="">
+          </div>
+        </article>
+
+        <article class="services__article services__article--gray">
+          <h2 class="services__title">
+            <span class="services__span">
+              Pagina de Eventos
+            </span>
+            <span class="services__span">
+              o Conferencias
+            </span>
+          </h2>
+          <div class="services__content">
+            <a class="services__link" href="#">
+              <img class="services__arrow" src="../assets/img/top-arrow-circle.svg" alt="">
+            </a>
+            <img class="services__img" src="../assets/img/conference.svg" alt="">
+          </div>
+        </article>
+
+      </section>
+    </section>
+    <!--Testimonios-->
+    <section class="testimonials">
+      <h1 class="testimonial__title">Lo que dicen nuestros clientes</h1>
+      <div class="testimonial">
+        <img class="testimonial__img" src="../assets/img/cliente-1.jpg" alt="Cliente 1" />
+        <p class="paragraph__name">Carlos Sánchez, Consultor</p>
+        <p class="paragraph__quote">"Transformó nuestra idea en una realidad digital. Un desarrollador comprometido y
+          creativo."
+        </p>
+      </div>
+
+      <div class="testimonial">
+        <img class="testimonial__img" src="../assets/img/cliente-2.jpg" alt="Cliente 2" />
+        <p class="paragraph__name">Laura Gómez, Emprendedora</p>
+        <p class="paragraph__quote">"Excelente trabajo, cumplió con todas nuestras expectativas. Muy profesional y
+          siempre
+          disponible."</p>
+      </div>
+
+      <div class="testimonial">
+        <img class="testimonial__img" src="../assets/img/cliente-3.jpg" alt="Cliente 3" />
+        <p class="paragraph__name">Miguel Torres, Agencia Creativa</p>
+        <p class="paragraph__quote">"Logró que nuestra web sea rápida, moderna y adaptable. Lo recomiendo 100%."
+        </p>
+      </div>
+    </section>
+  </div>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer__container">
+      <section class="footer__main">
+        <a href="index.html" class="footer__logo--link">
+          <img src="assets/img/logo-blanco.png" alt="Logo" class="footer__logo">
+        </a>
+
+        <article class="footer__contact">
+          <h4 class="footer__copy">CONTÁCTANOS:</h4>
+          <p class="footer__info">Email: carmelo@cs.es</p>
+          <p class="footer__info">Teléfono: 633-897-257</p>
+          <p class="footer__info">Dirección: CL COMUNIDAD DE MADRID 39 BIS 1º F 50</p>
+        </article>
+
+        <nav class="footer__social">
+          <a href="https://es.linkedin.com/" target="_blank" class="footer__social--link"><img
+              src="assets/img/linkedin.svg" alt="Linkedin" class="footer__media"></a>
+          <a href="https://x.com/" target="_blank" class="footer__social--link"><img src="assets/img/twitter.svg"
+              alt="X" class="footer__media"></a>
+          <a href="https://github.com/carmelo-suarez/" target="_blank" class="footer__social--link"><img
+              src="assets/img/github.svg" alt="Git hub" class="footer__media"></a>
+        </nav>
+      </section>
+
+      <section class="footer__copyright">
+        <p class="footer__copyright--paragraph">
+          &copy; Carmelo Suarez Claudio - Derechos Reservados 2025
+        </p>
+      </section>
+    </div>
+  </footer>
+</body>
 </html>

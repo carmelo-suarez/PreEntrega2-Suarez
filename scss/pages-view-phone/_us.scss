@@ -1,0 +1,21 @@
+@use '../base/variables' as *;
+@use '../utilities/extends' as *;
+/*Pagina nosotros*/
+.us__main{
+  padding: 30px 0;
+  @extend %grid-gap;
+}
+
+.us__title{
+  font-size: $adjustable-font;
+}
+
+.us__figure{
+  width: min(100%, 380px);
+  justify-self: center;
+}
+
+.us__img{
+  width: 100%;
+}
+

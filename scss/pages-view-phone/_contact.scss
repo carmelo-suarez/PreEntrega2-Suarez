@@ -1,0 +1,61 @@
+@use '../base/variables' as *;
+@use 'sass:map';
+@use '../utilities/maps' as *;
+@use '../pages-view-phone/services' as *;
+/*pagina contacto con anidamiento en sass*/
+/*formulario*/
+main {
+  section {
+    p {
+      @extend .paragraph;
+    }
+  }
+
+  section {
+    margin-top: 30px;
+
+    h1 {
+      font-size: $adjustable-font;
+    }
+
+    form {
+      max-width: 450px;
+      padding: 20px;
+      margin: 0 auto;
+      border-radius: 10px;
+      background-color: map.get($colors,light-gray);
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 8px;
+      }
+
+      textarea {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 8px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: map.get($colors,primary-color);
+        color: map.get($colors,white-color);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: map.get($colors,secundary-color);
+        }
+      }
+    }
+  }
+}

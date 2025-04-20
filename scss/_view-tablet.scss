@@ -1,0 +1,49 @@
+/*pantallas de tablets*/
+@media (width >= 768px){
+  /*pagina inicio*/
+  .header__main{
+    padding: 80px 0;
+    gap: 1rem;
+    align-items: center;
+    grid-template-columns: 55% 40%;
+    justify-content: space-between;
+    grid-template-areas: /*dos columnas y tres filas*/
+    "title img"
+    "paragraph img"
+    "link img";
+  }
+  .header__title{
+    grid-area: title;
+  }
+  .header__figure{
+    grid-area: img;
+  }
+  .header__paragraph{
+    grid-area: paragraph;
+  }
+  .header__cto{
+    grid-area: link;
+    padding: 1rem 2rem;
+    place-self: start;
+  }
+  /* pagina nosotros*/
+  .us__main{
+    padding: 80px 0;
+    gap: 1rem;
+    align-items: center;
+    grid-template-columns: 40% 55%;
+    justify-content: space-between;
+    grid-template-areas: /*dos columnas y dos filas*/
+    "img title"
+    "img paragraph"
+  }
+  .us__title{
+    grid-area: title;
+  }
+  .us__figure{
+    grid-area: img;
+  }
+  .paragraph__container{
+    grid-area: paragraph;
+  }
+}
